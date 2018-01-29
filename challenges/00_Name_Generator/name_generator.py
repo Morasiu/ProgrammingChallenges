@@ -3,7 +3,7 @@
 
 import sys, random
 
-print("\n<-------_Name generator 0.1.0--------->")
+print("\n<--------Name generator 0.1.1--------->")
 print("Created by Morasiu (morasiu2@gmail.com)\n")
 try:
     lengh = int(raw_input("Enter name lengh: "))
@@ -39,4 +39,5 @@ for x in range(0, lengh):
                 name += random.choice(consonants)
 
 
+name = name.title()
 print("Your name:\n"+ name)
