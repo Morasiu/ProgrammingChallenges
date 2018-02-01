@@ -8,34 +8,41 @@ class Converter{
     Console.WriteLine("Created by Morasiu (morasiu2@gmail.com)");
     Console.WriteLine("Enter temperature below. For example 50 C or 24.2 F.");
    
-    GetTemp();
+    Hashtable tempInfo = GetTemp();
+    ChooseScale((char)tempInfo["scale"]);
+  }
+  
+  static char ChooseScale(char originScale){
+    Console.Write("1. Kelvin\n2. Celsius\n3. Fahrenheit\nChoose scale: ");
+    char convertScale = char.Parse(Console.ReadLine());
+
+    return convertScale;
   }
 
-
   static Hashtable GetTemp(){
-    string input  = Console.ReadLine();
+    Hashtable tempHashtable = new Hashtable();
+    float tempValue = 0;
     string[] temp = new string[2];
-    temp = input.Split(' ');
-    Hashtable temps = new Hashtable();
-    int tempValue = 0;
     //Check if temperature format is valid.
-    if (temp.Length != 2 || !(new [] {"F", "K", "C"}.Contains(temp[1]))){
-      Console.WriteLine("Wrong data. Try again.");
-      GetTemp();
-    }
-
-    try{
-      tempValue = int.Parse(temp[0]);
-    }catch{
-      Console.WriteLine("Not a valid number");
-      GetTemp();
-    }
+    while (true){
+      string input  = Console.ReadLine();
+      temp = input.Split(' ');
+      if (temp.Length == 2 || (new [] {"F", "K", "C"}.Contains(temp[1])))
+        break;
+      //check if it is int
+      try{
+        tempValue = float.Parse(temp[0]);
+        break;
+      }catch{
+        Console.WriteLine("Not a valid number");
+      }
     
-    temps.Add("scale", temp[1]);
-    temps.Add("value", tempValue);
+      Console.WriteLine("Wrong data");
+    }
+       
+    tempHashtable.Add("scale", char.Parse(temp[1]));
+    tempHashtable.Add("value", tempValue);
 
-    foreach (string x in temp)
-      Console.WriteLine(x);
-    return temps;
+    return tempHashtable;
   }
 }
