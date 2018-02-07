@@ -9,7 +9,11 @@ All task from list of Programming Challenges v1.4
 1. [02 Temperature Converter](#02)
 1. [03 Age Calculator](#03)
 
-Progress:
+## Progress
+All - **100** <br>
+Done - **4** <br>
+Remain - **96** <br>
+
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/00.png)
 * <a name="01">01</a> Higher/lower - 31.01.2018 *Done* (`C#`) <br>
