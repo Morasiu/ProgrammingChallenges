@@ -24,5 +24,5 @@ Remain - **96** <br>
 ![02](docs/02.png)
 * <a name="03">03</a> Age Calculator - 07.02.2018 *Done* (`C#`) <br>
 ![03](docs/03.png)
-* <a name="04">04</a> Cipherp - 07.02.2018 *Pending* (`C#`) <br>
+* <a name="04">04</a> Cipher - 08.02.2018 *Done* (`C#`) <br>
 ![04](docs/04.png)
