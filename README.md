@@ -10,11 +10,12 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 1. [02 Temperature Converter](#02)
 1. [03 Age Calculator](#03)
 1. [04 Cipher](#04)
+1. [05 FizzBuzz](#05)
 
 ## Progress
 All - **100** <br>
-Done - **4** <br>
-Remain - **96** <br>
+Done - **5** <br>
+Remain - **95** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/00.png)
@@ -24,5 +25,7 @@ Remain - **96** <br>
 ![02](docs/02.png)
 * <a name="03">03</a> Age Calculator - 07.02.2018 *Done* (`C#`) <br>
 ![03](docs/03.png)
-* <a name="04">04</a> Cipherp - 07.02.2018 *Pending* (`C#`) <br>
+* <a name="04">04</a> Cipher - 08.02.2018 *Done* (`C#`) <br>
 ![04](docs/04.png)
+* <a name="05">05</a> FizzBuzz - 08.02.2018 *Done* (`C#`) <br>
+![05](docs/05.png)
