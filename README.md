@@ -2,6 +2,7 @@
 All task from list of Programming Challenges v1.4
 ![list](docs/list.png)
 
+If you have any questions, you can contact me by email morasiu2@gmail.com
 
 ## Table of content
 1. [00 Name generator](#00)

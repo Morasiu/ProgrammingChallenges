@@ -3,7 +3,7 @@ using System.Threading;
 
 class Cipher{
   static void Main(string[] args){
-    Console.WriteLine("<--------------_Cipher---------------->");
+    Console.WriteLine("<---------------Cipher---------------->");
     Console.WriteLine("Created by Morasiu (morasiu2@gmail.com)");
 
     string text = GetText();
@@ -27,13 +27,12 @@ class Cipher{
         char originLetter = text[i];
         int asciiOrigin = originLetter;
         char keyChar = key[keyIndex];
-        int asciiKey = keyChar;
-        int asciiEnc = asciiOrigin + asciiKey + 32;
+        int asciiKey = keyChar - 32;
+        int asciiEnc = asciiOrigin + asciiKey;
         if (asciiEnc > 126)
-          asciiEnc -= 126; 
-        
+          asciiEnc = asciiEnc - 126 + 32; 
   
-        char encChar = (char) (asciiOrigin + asciiKey);
+        char encChar = (char) (asciiEnc);
   
         keyIndex++;
         if(keyIndex > key.Length -1)
@@ -45,7 +44,30 @@ class Cipher{
   }
 
   static void Decrypt(string text, string key){
-    
+    string decText = "";
+    int keyIndex = 0;
+    if (key.Length == 0){
+      Console.WriteLine("Empty key");
+    } else {
+      for(int i = 0; i < text.Length; i++){
+        char originLetter = text[i];
+        int asciiOrigin = originLetter;
+        char keyChar = key[keyIndex];
+        int asciiKey = keyChar - 32;
+        int asciiDec = asciiOrigin - asciiKey;
+        if (asciiDec <  32)
+          asciiDec = 126 - (32 - asciiDec); 
+  
+        char decChar = (char) (asciiDec);
+  
+        keyIndex++;
+        if(keyIndex > key.Length -1)
+         keyIndex = 0;
+        decText += decChar.ToString();
+      }
+      Console.Write("Result:\n>" + decText + "<\n");
+    }
+
   }
 
   static string ChooseOption(){
