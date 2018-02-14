@@ -11,12 +11,12 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 1. [03 Age Calculator](#03)
 1. [04 Cipher](#04)
 1. [05 FizzBuzz](#05)
-1. [06 RockPaperScizzors with AI](#06)
+1. [06 RockPaperScissors with AI](#06)
 
 ## Progress
 All - **100** <br>
-Done - **5** <br>
-Remain - **95** <br>
+Done - **7** <br>
+Remain - **93** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/00.png)
@@ -30,5 +30,5 @@ Remain - **95** <br>
 ![04](docs/04.png)
 * <a name="05">05</a> FizzBuzz - 08.02.2018 *Done* (`C#`) <br>
 ![05](docs/05.png)
-* <a name="06">06</a> RockPaperScizzors with AI (Check diagram in directrory) - 14.02.2018 *Done* (`C#`) <br>
+* <a name="06">06</a> RockPaperScissors with AI (Check diagram in directrory) - 14.02.2018 *Done* (`C#`) <br>
 ![06](docs/06.png)
