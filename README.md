@@ -11,6 +11,7 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 1. [03 Age Calculator](#03)
 1. [04 Cipher](#04)
 1. [05 FizzBuzz](#05)
+1. [06 RockPaperScizzors with AI](#06)
 
 ## Progress
 All - **100** <br>
@@ -29,3 +30,5 @@ Remain - **95** <br>
 ![04](docs/04.png)
 * <a name="05">05</a> FizzBuzz - 08.02.2018 *Done* (`C#`) <br>
 ![05](docs/05.png)
+* <a name="06">06</a> RockPaperScizzors with AI (Check diagram in directrory) - 14.02.2018 *Done* (`C#`) <br>
+![06](docs/06.png)
