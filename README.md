@@ -44,5 +44,4 @@ Remain - **92** <br>
 ![08](docs/08.png)
 
 ## Bonus
-* <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`)
-![Bonus 1](docs/bonus1.gif)
+* <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`) ![Bonus 1](docs/bonus1.gif)
