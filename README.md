@@ -13,11 +13,15 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 1. [05 FizzBuzz](#05)
 1. [06 RockPaperScizzors with AI](#06)
 1. [07 Project Euler (first10 problems)](#07)
+1. [08 Hangman (with online words)](#08)
+-----
+## Bonus
+1. [Loading animation](#bonus1)
 
 ## Progress
 All - **100** <br>
-Done - **5** <br>
-Remain - **95** <br>
+Done - **8** <br>
+Remain - **92** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/00.png)
@@ -36,3 +40,9 @@ Remain - **95** <br>
 * <a name="07">07</a> Project Euler (first 10 problems) - 24.02.2018 *Done* (`C#`)
 [Project Euler](https://projecteuler.net/archives) <br>
 ![07](docs/07.png)
+* <a name="08">08</a> Hangman (with online words) - 24.02.2018 *Pending* (`C#`)
+![08](docs/08.png)
+
+## Bonus
+* <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`)
+![Bonus 1](docs/bonus1.gif)
