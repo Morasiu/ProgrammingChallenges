@@ -33,6 +33,6 @@ Remain - **95** <br>
 ![05](docs/05.png)
 * <a name="06">06</a> RockPaperScizzors with AI (Check diagram in directrory) - 14.02.2018 *Done* (`C#`) <br>
 ![06](docs/06.png)
-* <a name="07">07</a> Project Euler (first 10 problems) - 14.02.2018 *In progress* (`C#`)
+* <a name="07">07</a> Project Euler (first 10 problems) - 24.02.2018 *Done* (`C#`)
 [Project Euler](https://projecteuler.net/archives) <br>
-![06](docs/07.png)
+![07](docs/07.png)
