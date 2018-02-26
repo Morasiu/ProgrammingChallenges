@@ -41,7 +41,7 @@ Remain - **91** <br>
 [Project Euler](https://projecteuler.net/archives) <br>
 ![07](docs/07.png)
 * <a name="08">08</a> Hangman (with online words) - 24.02.2018 *Done* (`C#`)
-Words are from [FakeWords](https://fakena.me/random-english-words/one/), but these are real words. Trust me.
+Words are from [Fake Name Generator](https://fakena.me/random-english-words/one/), but these are real words. Trust me.
 Definitions are form [FreeDictionary](https://www.thefreedictionary.com/) </br>
 ![08](docs/08.png)
 
