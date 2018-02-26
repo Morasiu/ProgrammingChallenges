@@ -20,8 +20,8 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 
 ## Progress
 All - **100** <br>
-Done - **8** <br>
-Remain - **92** <br>
+Done - **9** <br>
+Remain - **91** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/00.png)
@@ -40,7 +40,9 @@ Remain - **92** <br>
 * <a name="07">07</a> Project Euler (first 10 problems) - 24.02.2018 *Done* (`C#`)
 [Project Euler](https://projecteuler.net/archives) <br>
 ![07](docs/07.png)
-* <a name="08">08</a> Hangman (with online words) - 24.02.2018 *Pending* (`C#`)
+* <a name="08">08</a> Hangman (with online words) - 24.02.2018 *Done* (`C#`)
+Words are from [FakeWords](https://fakena.me/random-english-words/one/), but these are real words. Trust me.
+Definitions are form [FreeDictionary](https://www.thefreedictionary.com/)
 ![08](docs/08.png)
 
 ## Bonus
