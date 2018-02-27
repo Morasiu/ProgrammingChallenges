@@ -12,7 +12,7 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 1. [04 Cipher](#04)
 1. [05 FizzBuzz](#05)
 1. [06 RockPaperScizzors with AI](#06)
-1. [07 Project Euler (first10 problems)](#07)
+1. [07 Project Euler (first 10 problems)](#07)
 1. [08 Hangman (with online words)](#08)
 1. [09 Love Calculator](#09)
 -----
@@ -25,27 +25,30 @@ Done - **10** <br>
 Remain - **90** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
-![00](docs/00.png)
+![00](docs/images/00.png)
 * <a name="01">01</a> Higher/lower - 31.01.2018 *Done* (`C#`) <br>
-![01](docs/01.png)
+![01](docs/images/01.png)
 * <a name="02">02</a> Temperature Converter - 05.02.2018 *Done* (`C#`) <br>
-![02](docs/02.png)
+![02](docs/images/02.png)
 * <a name="03">03</a> Age Calculator - 07.02.2018 *Done* (`C#`) <br>
-![03](docs/03.png)
+![03](docs/images/03.png)
 * <a name="04">04</a> Cipher - 08.02.2018 *Done* (`C#`) <br>
-![04](docs/04.png)
+[Encrypting](docs/Cipher.md)<br>
+![04](docs/images/04.png)
 * <a name="05">05</a> FizzBuzz - 08.02.2018 *Done* (`C#`) <br>
-![05](docs/05.png)
+![05](docs/images/05.png)
 * <a name="06">06</a> RockPaperScizzors with AI (Check diagram in directrory) - 14.02.2018 *Done* (`C#`) <br>
-![06](docs/06.png)
+[AI algorithm](docs/RPC_AI_Alorithm.png)<br>
+![06](docs/images/06.png)
 * <a name="07">07</a> Project Euler (first 10 problems) - 24.02.2018 *Done* (`C#`)
 [Project Euler](https://projecteuler.net/archives) <br>
-![07](docs/07.png)
+![07](docs/images/07.png)
 * <a name="08">08</a> Hangman (with online words) - 24.02.2018 *Done* (`C#`)
 Words are from [Fake Name Generator](https://fakena.me/random-english-words/one/), but these are real words. Trust me.
 Definitions are form [FreeDictionary](https://www.thefreedictionary.com/) </br>
-![08](docs/08.png)
-* <a name="09">09</a> Love Calculator - 27.02.2018 *Done* (`C#`)</br>
-![09](docs/09.png)
+![08](docs/images/08.png)
+* <a name="09">09</a> Love Calculator - 27.02.2018 *Done* (`C#`)<br>
+[How it works](docs/LoveCalculator.md)<br>
+![09](docs/images/09.png)
 ## Bonus
-* <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`) ![Bonus 1](docs/bonus1.gif)
+* <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`)![Bonus 1](docs/images/bonus1.gif)
