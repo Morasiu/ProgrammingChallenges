@@ -14,14 +14,15 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 1. [06 RockPaperScizzors with AI](#06)
 1. [07 Project Euler (first10 problems)](#07)
 1. [08 Hangman (with online words)](#08)
+1. [09 Love Calculator](#09)
 -----
 ## Bonus
 1. [Loading animation](#bonus1)
 
 ## Progress
 All - **100** <br>
-Done - **9** <br>
-Remain - **91** <br>
+Done - **10** <br>
+Remain - **90** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/00.png)
@@ -44,6 +45,7 @@ Remain - **91** <br>
 Words are from [FakeWords](https://fakena.me/random-english-words/one/), but these are real words. Trust me.
 Definitions are form [FreeDictionary](https://www.thefreedictionary.com/)
 ![08](docs/08.png)
-
+* <a name="09">09</a> Love Calculator - 27.02.2018 *Done* (`C#`)</br>
+![09](docs/09.png)
 ## Bonus
 * <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`) ![Bonus 1](docs/bonus1.gif)
