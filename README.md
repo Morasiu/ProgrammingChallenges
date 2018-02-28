@@ -16,6 +16,7 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 1. [08 Hangman (with online words)](#08)
 1. [09 Love Calculator](#09)
 1. [10 Random Sentence Generator](#10)
+1. [11 Password Generator](#11)
 -----
 ## Bonus
 1. [Loading animation](#bonus1)
