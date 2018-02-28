@@ -1,13 +1,12 @@
 using System;
 
 class HigherLower{
-  static void Main(string[] arg){
+  static void Main(string[] args){
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine("<----------Higher/Lower Game---------->");
     Console.WriteLine("Created by Morasiu (morasiu2@gmail.com)");
     Console.Write("Press any key to start.");
     Console.ReadKey();
-    
     StartGame();
   }
 
