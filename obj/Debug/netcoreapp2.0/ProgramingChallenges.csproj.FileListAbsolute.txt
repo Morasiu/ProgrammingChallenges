@@ -1,0 +1,3 @@
+/home/hubert/github/ProgramingChallenges/obj/Debug/netcoreapp2.0/ProgramingChallenges.csproj.CoreCompileInputs.cache
+/home/hubert/github/ProgramingChallenges/obj/Debug/netcoreapp2.0/ProgramingChallenges.AssemblyInfoInputs.cache
+/home/hubert/github/ProgramingChallenges/obj/Debug/netcoreapp2.0/ProgramingChallenges.AssemblyInfo.cs
