@@ -18,14 +18,14 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 1. [10 Random Sentence Generator](#10)
 1. [11 Password Generator](#11)
 1. [12 Internet Time](#12)
------
+1. [13 Haiku Generator](#13)
 ## Bonus
 1. [Loading animation](#bonus1)
-
+-----
 ## Progress
 All - **100** <br>
-Done - **13** <br>
-Remain - **89** <br>
+Done - **14** <br>
+Remain - **88** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/images/00.png)
@@ -60,5 +60,7 @@ Definitions are form [FreeDictionary](https://www.thefreedictionary.com/) </br>
 * <a name="12">12</a> ~~Internet Time~~ Clock - 01.03.2018 *Done* (`C#`)
 Why Clock? I found Internet Time quite boring challenge so I've made clock with ASCII art. <br>
 ![12](docs/images/12.png)
+* <a name="13">13</a> Haiku Generator - 02.03.2018 *Done* (`C#`) <br>
+![13](docs/images/13.png)
 ## Bonus
 * <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`)![Bonus 1](docs/images/bonus1.gif)

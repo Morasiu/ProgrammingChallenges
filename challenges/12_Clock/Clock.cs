@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using System.Collections.Generic;
+
 class Clock{
   static void Main(string[] args){
     Console.ForegroundColor = ConsoleColor.Green;
@@ -12,12 +13,14 @@ class Clock{
   }
 
   static string GetTime(){
-     DateTime time = DateTime.Now;
-     string sTime = time.ToString("HH:mm:ss");
-     return sTime;
+    // Get time from system
+    DateTime time = DateTime.Now;
+    string sTime = time.ToString("HH:mm:ss");
+    return sTime;
   }
 
   static void StartClock(){
+    //Infite loop with our clock :)
     List<string> arts = new List<string>();
     string time;
     string clock = "";
@@ -40,6 +43,7 @@ class Clock{
   }
 
   static string GetACIIArt(char c){
+    // Get ASCII art
     string art = "";
     switch (c){
       case '0':

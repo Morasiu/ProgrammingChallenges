@@ -3,3 +3,5 @@ obj/ProgramingChallenges.csproj.nuget.cache
 obj/ProgramingChallenges.csproj.nuget.g.props
 obj/ProgramingChallenges.csproj.nuget.g.targets
 obj/project.assets.json
+Polygon/*
+.vscode
