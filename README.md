@@ -5,29 +5,29 @@ All task from list of Programming Challenges v1.4
 If you have any questions, you can contact me by email morasiu2@gmail.com
 
 ## Table of content
-1. [00 Name generator](#00)
-1. [01 Higher/lower](#01)
-1. [02 Temperature Converter](#02)
-1. [03 Age Calculator](#03)
-1. [04 Cipher](#04)
-1. [05 FizzBuzz](#05)
-1. [06 RockPaperScizzors with AI](#06)
-1. [07 Project Euler (first 10 problems)](#07)
-1. [08 Hangman (with online words)](#08)
-1. [09 Love Calculator](#09)
-1. [10 Random Sentence Generator](#10)
-1. [11 Password Generator](#11)
-1. [12 Internet Time](#12)
-1. [13 Haiku Generator](#13)
-1. [14 Magic 8-ball](#14)
-1. [15 Collatz Conjecture](#15)
+[00 Name generator](#00)
+[01 Higher/lower](#01)
+[02 Temperature Converter](#02)
+[03 Age Calculator](#03)
+[04 Cipher](#04)
+[05 FizzBuzz](#05)
+[06 RockPaperScizzors with AI](#06)
+[07 Project Euler (first 10 problems)](#07)
+[08 Hangman (with online words)](#08)
+[09 Love Calculator](#09)
+[10 Random Sentence Generator](#10)
+[11 Password Generator](#11)
+[12 Internet Time](#12)
+[13 Haiku Generator](#13)
+[14 Magic 8-ball](#14)
+[15 Collatz Conjecture](#15)
 ## Bonus
 1. [Loading animation](#bonus1)
 
 ## Progress
 All - **100** <br>
-Done - **15** <br>
-Remain - **85** <br>
+Done - **16** <br>
+Remain - **84** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/images/00.png)
