@@ -20,6 +20,7 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 1. [12 Internet Time](#12)
 1. [13 Haiku Generator](#13)
 1. [14 Magic 8-ball](#14)
+1. [15 Collatz Conjecture](#15)
 ## Bonus
 1. [Loading animation](#bonus1)
 
@@ -65,5 +66,7 @@ Why Clock? I found Internet Time quite boring challenge so I've made clock with 
 ![13](docs/images/13.png)
 * <a name="14">14</a> Magic 8-ball - 06.03.2018 *Done* (`C#`) <br>
 ![14](docs/images/14.png)
+* <a name="15">15</a> Collatz Conjecture - 06.03.2018 *Done* (`C#`) <br>
+![15](docs/images/15.png)
 ## Bonus
 * <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`)![Bonus 1](docs/images/bonus1.gif)
