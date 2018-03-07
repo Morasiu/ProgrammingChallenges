@@ -23,6 +23,7 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 * [13 Haiku Generator](#13)
 * [14 Magic 8-ball](#14)
 * [15 Collatz Conjecture](#15)
+* [16 Reverse String](#16)
 
 ## Bonus
 
@@ -73,5 +74,11 @@ Why Clock? I found Internet Time quite boring challenge so I've made clock with 
 ![14](docs/images/14.png)
 * <a name="15">15</a> Collatz Conjecture - 06.03.2018 *Done* (`C#`) <br>
 ![15](docs/images/15.png)
+* <a name="16">16</a> Reverse String - 07.03.2018 *Done* (`C#`) <br>
+Yeah, so... Reverse string isn't that hard so I've made one-liner challenge
+```csharp
+string.Concat(text.Reverse())
+```
+![16](docs/images/16.png)
 ## Bonus
 * <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`)![Bonus 1](docs/images/bonus1.gif)
