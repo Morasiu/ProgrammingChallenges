@@ -1,30 +1,35 @@
 # ProgramingChallenges
+
 All task from list of Programming Challenges v1.4
 ![list](docs/list.png)
 
 If you have any questions, you can contact me by email morasiu2@gmail.com
 
 ## Table of content
-[00 Name generator](#00)
-[01 Higher/lower](#01)
-[02 Temperature Converter](#02)
-[03 Age Calculator](#03)
-[04 Cipher](#04)
-[05 FizzBuzz](#05)
-[06 RockPaperScizzors with AI](#06)
-[07 Project Euler (first 10 problems)](#07)
-[08 Hangman (with online words)](#08)
-[09 Love Calculator](#09)
-[10 Random Sentence Generator](#10)
-[11 Password Generator](#11)
-[12 Internet Time](#12)
-[13 Haiku Generator](#13)
-[14 Magic 8-ball](#14)
-[15 Collatz Conjecture](#15)
+
+* [00 Name generator](#00)
+* [01 Higher/lower](#01)
+* [02 Temperature Converter](#02)
+* [03 Age Calculator](#03)
+* [04 Cipher](#04)
+* [05 FizzBuzz](#05)
+* [06 RockPaperScizzors with AI](#06)
+* [07 Project Euler (first 10 problems)](#07)
+* [08 Hangman (with online words)](#08)
+* [09 Love Calculator](#09)
+* [10 Random Sentence Generator](#10)
+* [11 Password Generator](#11)
+* [12 Internet Time](#12)
+* [13 Haiku Generator](#13)
+* [14 Magic 8-ball](#14)
+* [15 Collatz Conjecture](#15)
+
 ## Bonus
+
 1. [Loading animation](#bonus1)
 
 ## Progress
+
 All - **100** <br>
 Done - **16** <br>
 Remain - **84** <br>
