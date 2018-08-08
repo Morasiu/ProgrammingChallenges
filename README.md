@@ -24,6 +24,8 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 * [14 Magic 8-ball](#14)
 * [15 Collatz Conjecture](#15)
 * [16 Reverse String](#16)
+* [~~17 Eurelian Path~~](#17)
+* [18 Simple File Explorer](#18)
 
 ## Bonus
 
@@ -80,5 +82,9 @@ Yeah, so... Reverse string isn't that hard so I've made one-liner challenge
 string.Concat(text.Reverse())
 ```
 ![16](docs/images/16.png)
+* <a name="17">17</a>~~Eurelian Path~~<br>
+Why I didn't solve that challenge? It sounds fun, but I hate writing GUI and that would be a nightmare for me.
+Maybe some day? 
+* <a name="18">18</a> Simple file Explorer *Pending* (`C#`)<br>
 ## Bonus
 * <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`)![Bonus 1](docs/images/bonus1.gif)

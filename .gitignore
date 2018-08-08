@@ -5,3 +5,9 @@ obj/ProgramingChallenges.csproj.nuget.g.targets
 obj/project.assets.json
 Polygon/*
 .vscode
+challenges/bin
+challenges/obj
+challenges/Properties
+challenges/ProgrammingChallenges.csproj
+challenges/ProgrammingChallenges.csproj.user
+challenges/.vs
