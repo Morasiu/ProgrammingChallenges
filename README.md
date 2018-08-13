@@ -86,6 +86,6 @@ string.Concat(text.Reverse())
 Why I didn't solve that challenge? It sounds fun, but I hate writing GUI and that would be a nightmare for me.
 Maybe some day? 
 * <a name="18">18</a> Simple file Explorer - 09.08.2018 *Done* (`C#`)<br>
-* ![18](docs/images/18.png)
+![18](docs/images/18.png)
 ## Bonus
 * <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`)![Bonus 1](docs/images/bonus1.gif)
