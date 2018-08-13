@@ -26,6 +26,7 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 * [16 Reverse String](#16)
 * [~~17 Eurelian Path~~](#17)
 * [18 Simple File Explorer](#18)
+* [19 Count Words](#19)
 
 ## Bonus
 
@@ -34,8 +35,8 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 ## Progress
 
 All - **100** <br>
-Done - **18** <br>
-Remain - **82** <br>
+Done - **19** <br>
+Remain - **81** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/images/00.png)
@@ -82,10 +83,12 @@ Yeah, so... Reverse string isn't that hard so I've made one-liner challenge
 string.Concat(text.Reverse())
 ```
 ![16](docs/images/16.png)
-* <a name="17">17</a>~~Eurelian Path~~<br>
+* <a name="17">17</a> ~~Eurelian Path~~<br>
 Why I didn't solve that challenge? It sounds fun, but I hate writing GUI and that would be a nightmare for me.
 Maybe some day? 
 * <a name="18">18</a> Simple file Explorer - 09.08.2018 *Done* (`C#`)<br>
 ![18](docs/images/18.png)
+* <a name="19">19</a> Count Words - 13.08.2018 *Done* (`C#`)<br>
+![19](docs/images/19.png)
 ## Bonus
-* <a name="bonus1">Bonus 1</a> Loading animation in console 24.02.2018 *Done* (`C#`)![Bonus 1](docs/images/bonus1.gif)
+* <a name="bonus1">1.</a> Loading animation in console 24.02.2018 *Done* (`C#`)![Bonus 1](docs/images/bonus1.gif)
