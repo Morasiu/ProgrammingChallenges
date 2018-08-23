@@ -6,3 +6,7 @@ authors = ["Morasiu <morasiu2@gmail.com>"]
 [dependencies]
 getch = "0.2.0"
 console = "0.6.1"
+
+[[bin]]
+name = "connect_four"
+path = "src/connect_four.rs"
