@@ -5,6 +5,16 @@ All task from list of Programming Challenges v1.4
 
 If you have any questions, you can contact me by email morasiu2@gmail.com
 
+## How to run/compile
+
+* **Python** - just run script using Pyhton 3 (for example. `python script.py`)
+* **C#** - you can run it using `mono` or clicking on Windows, and compile by `mcs`:
+  * compile - `mcs script.cs`
+  * run - `mono script.exe`
+* **Rust** -
+  * compile - `cargo build`
+  * run - click on `exe` file on Windows or run like a typical program on Linux (for example. typing its name in console)
+
 ## Table of content
 
 * [00 Name generator](#00)
@@ -27,17 +37,18 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 * [~~17 Eurelian Path~~](#17)
 * [18 Simple File Explorer](#18)
 * [19 Count Words](#19)
-* [20 Count Words](#20)
+* [20 Minesweeper](#20)
+* [21 Connect Four](#20)
 
-## Bonus
+## Bonuses
 
 1. [Loading animation](#bonus1)
 
 ## Progress
 
 All - **100** <br>
-Done - **20** <br>
-Remain - **80** <br>
+Done - **21** <br>
+Remain - **79** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/images/00.png)
@@ -91,7 +102,11 @@ Maybe some day?
 ![18](docs/images/18.png)
 * <a name="19">19</a> Count Words - 13.08.2018 *Done* (`C#`)<br>
 ![19](docs/images/19.png)
-* <a name="19">20</a> Minesweeper - 14.08.2018 *Done* (`C#`)<br>
+* <a name="20">20</a> Minesweeper - 14.08.2018 *Done* (`C#`)<br>
 ![20](docs/images/20.png)
+* <a name="21">21</a> Connect Four - 23.08.2018 *Done* (`Rust`)<br>
+![21](docs/images/21.png)
+
 ## Bonus
+
 * <a name="bonus1">1.</a> Loading animation in console 24.02.2018 *Done* (`C#`)![Bonus 1](docs/images/bonus1.gif)
