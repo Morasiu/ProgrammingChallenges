@@ -40,6 +40,7 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 * [20 Minesweeper](#20)
 * [21 Connect Four](#21)
 * [22 BMI Calculator](#22)
+* [23 Image Downloader](#23)
 
 ## Bonuses
 
@@ -48,8 +49,8 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 ## Progress
 
 All - **100** <br>
-Done - **22** <br>
-Remain - **78** <br>
+Done - **23** <br>
+Remain - **77** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/images/00.png)
@@ -109,6 +110,16 @@ Maybe some day?
 ![21](docs/images/21.png)
 * <a name="22">22</a> BMI Calculator - 28.08.2018 *Done* (`Rust`)<br>
 ![22](docs/images/22.png)
+* <a name="23">23</a> Image Downloader - 28.08.2018 *Done* (`C#`)<br>
+Since it's either too easy or too boring I've managed to make this as simple as that:
+
+```csharp
+using(WebClient client = new WebClient())
+{
+    client.DownloadFile("http://www.example.com/image.jpg", localFilename);
+}
+```
+
 
 ## Bonus
 
