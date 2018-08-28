@@ -1,0 +1,12 @@
+[package]
+name = "bmi_calculator"
+version = "0.1.0"
+authors = ["Morasiu <morasiu2@gmail.com>"]
+
+[dependencies]
+getch = "0.2.0"
+console = "0.6.1"
+
+[[bin]]
+name = "bmi_calculator"
+path = "src/bmi_calculator.rs"

@@ -38,7 +38,8 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 * [18 Simple File Explorer](#18)
 * [19 Count Words](#19)
 * [20 Minesweeper](#20)
-* [21 Connect Four](#20)
+* [21 Connect Four](#21)
+* [22 BMI Calculator](#22)
 
 ## Bonuses
 
@@ -47,8 +48,8 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 ## Progress
 
 All - **100** <br>
-Done - **21** <br>
-Remain - **79** <br>
+Done - **22** <br>
+Remain - **78** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/images/00.png)
@@ -106,6 +107,8 @@ Maybe some day?
 ![20](docs/images/20.png)
 * <a name="21">21</a> Connect Four - 23.08.2018 *Done* (`Rust`)<br>
 ![21](docs/images/21.png)
+* <a name="22">22</a> BMI Calculator - 28.08.2018 *Done* (`Rust`)<br>
+![22](docs/images/22.png)
 
 ## Bonus
 

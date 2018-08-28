@@ -8,7 +8,7 @@ fn main() {
     let term = Term::stdout();
     println!("<------------Connect four------------->");
     println!("Created by Morasiu (morasiu2@gmail.com)");
-    println!("Press any key to start"); //It's a lie :(
+    println!("Press any key to start");
     term.read_key().ok();
     let mut player: i32 = 1;
     let mut cursor: i32 = 0;
