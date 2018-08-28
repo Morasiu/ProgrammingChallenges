@@ -48,6 +48,9 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 
 ## Progress
 
+23/100
+■■■■■■■■■■■■□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
+
 All - **100** <br>
 Done - **23** <br>
 Remain - **77** <br>
@@ -111,14 +114,15 @@ Maybe some day?
 * <a name="22">22</a> BMI Calculator - 28.08.2018 *Done* (`Rust`)<br>
 ![22](docs/images/22.png)
 * <a name="23">23</a> Image Downloader - 28.08.2018 *Done* (`C#`)<br>
-Since it's either too easy or too boring I've managed to make this as simple as that:
+Since it's either too easy or too boring, I've managed to do this in C# as simple as that:
 
 ```csharp
-using(WebClient client = new WebClient())
-{
+using (WebClient client = new WebClient()) {
     client.DownloadFile("http://www.example.com/image.jpg", localFilename);
 }
 ```
+
+As you see, not really a challenge. Let's move on
 
 
 ## Bonus
