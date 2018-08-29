@@ -17,6 +17,6 @@ class CountWords{
   }
 
   static int Count(string sentence) {
-    return sentence.Split(" ", StringSplitOptions.RemoveEmptyEntries).Length;
+    return sentence.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries).Length;
   }
 }
