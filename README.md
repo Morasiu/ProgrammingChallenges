@@ -129,4 +129,4 @@ As you see, not really a challenge. Let's move on
 
 ## Bonus
 
-* <a name="bonus1">1.</a> Loading animation in console 24.02.2018 *Done* (`C#`)![Bonus 1](docs/images/bonus1.gif)
+* <a name="bonus1">1.</a> Loading animation in console 24.02.2018 *Done* (`C#`)  ![Bonus 1](docs/images/bonus1.gif)
