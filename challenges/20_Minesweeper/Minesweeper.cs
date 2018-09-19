@@ -196,7 +196,6 @@ internal class Minesweeper {
     }
 
     PrintLowBorder();
-
     PrintXCords();
 
     Console.Write("\n\n");

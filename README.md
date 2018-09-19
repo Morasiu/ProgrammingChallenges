@@ -41,6 +41,7 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 * [21 Connect Four](#21)
 * [22 BMI Calculator](#22)
 * [23 Image Downloader](#23)
+* [24 Sudoku (with resolve)](#24)
 
 ## Bonuses
 
@@ -48,13 +49,12 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 
 ## Progress
 
-23/100
+24/100
 
-■■■■■■■■■■■■□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
+■■■■■■■■■■■■■□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 
 All - **100** <br>
-Done - **23** <br>
-Remain - **77** <br>
+Done - **24** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/images/00.png)
@@ -124,7 +124,8 @@ using (WebClient client = new WebClient()) {
 ```
 
 As you see, not really a challenge. Let's move on
-
+* <a name="24">24</a> Sudoku (with resolver) - 19.09.2018 *Done* (`C#`)<br>
+![24](docs/images/24.png)
 
 ## Bonus
 
