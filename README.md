@@ -41,7 +41,8 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 * [21 Connect Four](#21)
 * [22 BMI Calculator](#22)
 * [23 Image Downloader](#23)
-* [24 Sudoku (with resolve)](#24)
+* [24 Sudoku (with resolver)](#24)
+* [25 Maze generator (with resolver)](#25)
 
 ## Bonuses
 
@@ -126,7 +127,8 @@ using (WebClient client = new WebClient()) {
 As you see, not really a challenge. Let's move on
 * <a name="24">24</a> Sudoku (with resolver) - 19.09.2018 *Done* (`C#`)<br>
 ![24](docs/images/24.png)
-
+* <a name="25">25</a> Maze generator (with resolver) - 13.11.2018 *Partial done* (`C#`)<br>
+![25_1](docs/images/25_1.gif)
 ## Bonus
 
 * <a name="bonus1">1.</a> Loading animation in console 24.02.2018 *Done* (`C#`)  ![Bonus 1](docs/images/bonus1.gif)

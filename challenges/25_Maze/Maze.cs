@@ -57,11 +57,11 @@ class Maze {
       var key = Console.ReadKey().Key;
       switch (key) {
         case ConsoleKey.D1:
-          GenerateMaze(showAnimation: false);
+          GenerateMaze(false);
           isOptionCorrect = true;
           break;
         case ConsoleKey.D2:
-          GenerateMaze(showAnimation: true);
+          GenerateMaze(true);
           isOptionCorrect = true;
           break;
         case ConsoleKey.D3:
@@ -85,16 +85,16 @@ class Maze {
     Console.WriteLine("Generating maze " + width + "x" + height);
     GenerateEmptyMaze(width, height);
 
-    MazeGeneratingAlgorithm(showAnimation);
+    DepthFirstSearchAlgorithm(showAnimation);
 
     PrintMaze(false);
     Console.WriteLine("Press any key to Quit");
     Console.ReadKey();
   }
 
-  private static void MazeGeneratingAlgorithm(bool showAnimation) {
+  private static void DepthFirstSearchAlgorithm(bool showAnimation) {
     var random = new Random();
-    // Starting point at (0, 0)
+    // Entrance at (0, 0)
     _maze[0][0].Left = true;
 
     // Pick random place (why not?)
@@ -114,6 +114,7 @@ class Maze {
       if (IsDeadEnd(_cursor)) {
         if (logStack.Count <= 1) break;
         logStack.Pop();
+        // Go back (backtrack)
         _cursor = logStack.Peek();
         if (showAnimation) {
           Thread.Sleep(100);
@@ -134,10 +135,18 @@ class Maze {
       if (IsRightCellNotVisited(_cursor))
         go += GoRight;
 
+      // Get random direction
       go = (Go) go.GetInvocationList()[random.Next(0, go.GetInvocationList().Length)];
+
+      //Goto that direction
       go();
+
+      // Clear delegate
       go = null;
+
+      // Add new entry to log
       logStack.Push(_cursor);
+
       if (showAnimation) {
         Thread.Sleep(300);
         PrintMaze(true);
@@ -188,13 +197,14 @@ class Maze {
     //|   | 1x1 block
     //+---+
 
-    var board = "";
+    var board = " ";
     // Add first line
     board = AddOneLine(board);
 
     // Crate one maze in one string
     for (var row = 0; row < _maze.Length; row++) {
       for (var k = 1; k <= 2; k++) {
+        board += " ";
         for (var column = 0; column < _maze[row].Length; column++) {
           board = AddMazeFragment(printCursor, board, row, k, column);
         }
