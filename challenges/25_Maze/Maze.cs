@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
+using System.Linq;
 using System.Threading;
+using Priority_Queue;
 
-class Maze {
+internal class Maze {
   private const string WallWithLeftSideEmpty = "    ";
 
   private delegate void Go();
@@ -29,7 +30,7 @@ class Maze {
   private static (int, int) _cursor;
 
 
-  static void Main(string[] args) {
+  private static void Main(string[] args) {
     Console.ForegroundColor = ConsoleColor.Green;
     Console.CursorVisible = false;
     Console.Title = "Maze";
@@ -40,7 +41,7 @@ class Maze {
     Start();
   }
 
-  static void Start() {
+  private static void Start() {
     PrintTitle();
     ChooseOption();
     Console.ReadKey();
@@ -50,26 +51,23 @@ class Maze {
     Console.WriteLine("Options");
     Console.WriteLine("1 - Generate maze");
     Console.WriteLine("2 - Generate maze with animations");
-    Console.WriteLine("3 - Solve");
-    Console.WriteLine("4 - Solve with animations");
+    Console.WriteLine("3 - Generate and solve");
     var isOptionCorrect = false;
     do {
       var key = Console.ReadKey().Key;
       switch (key) {
         case ConsoleKey.D1:
           GenerateMaze(false);
+          PrintMaze(false);
           isOptionCorrect = true;
           break;
         case ConsoleKey.D2:
           GenerateMaze(true);
+          PrintMaze(false);
           isOptionCorrect = true;
           break;
         case ConsoleKey.D3:
-          Console.WriteLine("Soon");
-          isOptionCorrect = true;
-          break;
-        case ConsoleKey.D4:
-          Console.WriteLine("Soon");
+          Solve();
           isOptionCorrect = true;
           break;
         default:
@@ -79,6 +77,83 @@ class Maze {
     } while (!isOptionCorrect);
   }
 
+  private static void Solve() {
+    GenerateMaze(false);
+    // Starting point
+    var startingPoint = (0, 0);
+    var goal = (_maze.Length - 1, _maze[0].Length - 1);
+
+    // A* Algorithm
+    var frontierQueue = new SimplePriorityQueue<(int, int)>();
+    var cameFrom = new Dictionary<(int, int), (int, int)?>();
+    var costSoFar = new Dictionary<(int, int), int>();
+    frontierQueue.Enqueue(startingPoint, 0);
+    cameFrom.Add(startingPoint, null);
+    costSoFar.Add(startingPoint, 0);
+
+    while (frontierQueue.Count > 0) {
+      var current = frontierQueue.Dequeue();
+
+      //Early exit
+      if (current == goal) break;
+
+      foreach (var next in GetNeighbors(current)) {
+        var newCost = costSoFar[current] + CalculateCost(next, current);
+        if (!costSoFar.ContainsKey(next) && !cameFrom.ContainsKey(next)) {
+          costSoFar.Add(next, newCost);
+          var priority = newCost + CalculateCost(goal, next);
+          frontierQueue.Enqueue(next, priority);
+          cameFrom.Add(next, current);
+        }
+      }
+    }
+
+
+    // Get path
+    var currentBackTrack = cameFrom[goal].Value;
+    var path = new Queue<(int, int)>();
+
+    path.Enqueue(goal);
+    do {
+      path.Enqueue(currentBackTrack);
+      currentBackTrack = cameFrom[currentBackTrack].Value;
+    } while (currentBackTrack != startingPoint);
+    path.Enqueue(startingPoint);
+
+
+    PrintMazeWithSolution(path);
+  }
+
+  private static IEnumerable<(int, int)> GetNeighbors((int, int) position) {
+    var neighbors = new List<(int, int)>();
+
+    if (IsCellAbove(position) && _maze[position.Item1][position.Item2].Top) {
+      neighbors.Add((position.Item1 - 1, position.Item2));
+    }
+
+    if (IsCellBelow(position) && _maze[position.Item1][position.Item2].Bottom) {
+      neighbors.Add((position.Item1 + 1, position.Item2));
+    }
+
+    if (IsCellOnLeft(position) && _maze[position.Item1][position.Item2].Left) {
+      neighbors.Add((position.Item1, position.Item2 - 1));
+    }
+
+    if (IsCellOnRight(position) && _maze[position.Item1][position.Item2].Right) {
+      neighbors.Add((position.Item1, position.Item2 + 1));
+    }
+
+    return neighbors;
+  }
+
+  private static int CalculateCost((int, int) goal, (int, int) point) {
+    return 
+      // Rows
+      Math.Abs(point.Item1 - goal.Item1) 
+      // Columns
+      + Math.Abs(point.Item2 - goal.Item2);
+  }
+
   private static void GenerateMaze(bool showAnimation) {
     var width = GetWidthFromPlayer();
     var height = GetHeightFromPlayer();
@@ -86,10 +161,6 @@ class Maze {
     GenerateEmptyMaze(width, height);
 
     DepthFirstSearchAlgorithm(showAnimation);
-
-    PrintMaze(false);
-    Console.WriteLine("Press any key to Quit");
-    Console.ReadKey();
   }
 
   private static void DepthFirstSearchAlgorithm(bool showAnimation) {
@@ -104,7 +175,7 @@ class Maze {
     // Add first item to stack
     var logStack = new Stack<(int, int)>();
     logStack.Push(_cursor);
-    
+
     // Delegate to store method. I just wanted to try it...
     Go go = null;
 
@@ -120,12 +191,13 @@ class Maze {
           Thread.Sleep(100);
           PrintMaze(true);
         }
+
         continue;
       }
 
       if (IsBottomCellNotVisited(_cursor))
         go += GoBottom;
-      
+
       if (IsTopCellNotVisited(_cursor))
         go += GoTop;
 
@@ -151,20 +223,20 @@ class Maze {
         Thread.Sleep(300);
         PrintMaze(true);
       }
-
     } while (logStack.Count > 0);
 
     // Exit at bottom right corner
     _maze[_maze.Length - 1][_maze[0].Length - 1].Right = true;
   }
+
   private static void GoBottom() {
     _maze[_cursor.Item1][_cursor.Item2].Bottom = true;
     _cursor.Item1 += 1;
     _cursor.Item2 += 0;
     _maze[_cursor.Item1][_cursor.Item2].Visited = true;
     _maze[_cursor.Item1][_cursor.Item2].Top = true;
-  }  
-  
+  }
+
   private static void GoTop() {
     _maze[_cursor.Item1][_cursor.Item2].Top = true;
     _cursor.Item1 += -1;
@@ -201,37 +273,61 @@ class Maze {
     // Add first line
     board = AddOneLine(board);
 
-    // Crate one maze in one string
-    for (var row = 0; row < _maze.Length; row++) {
+    // Crate maze in one string
+    for (var row = 0; row < _maze.Length; row++)
       for (var k = 1; k <= 2; k++) {
         board += " ";
-        for (var column = 0; column < _maze[row].Length; column++) {
-          board = AddMazeFragment(printCursor, board, row, k, column);
-        }
+        for (var column = 0; column < _maze[row].Length; column++)
+          board = AddMazeFragment(new[] {_cursor}, board, row, k, column);
+
         board = AddEndLines(board, k, row);
       }
+
+    // Print maze
+    Console.WriteLine(board);
+  }
+
+  private static void PrintMazeWithSolution(IEnumerable<(int, int)> solution) {
+    Console.Clear();
+    PrintTitle();
+
+    //+---+
+    //|   | 1x1 block
+    //+---+
+
+    var board = " ";
+    // Add first line
+    board = AddOneLine(board);
+
+    // Crate maze in one string
+    var cursors = solution.ToList();
+    for (var row = 0; row < _maze.Length; row++)
+    for (var k = 1; k <= 2; k++) {
+      board += " ";
+      for (var column = 0; column < _maze[row].Length; column++)
+        board = AddMazeFragment(cursors, board, row, k, column);
+
+      board = AddEndLines(board, k, row);
     }
 
     // Print maze
     Console.WriteLine(board);
   }
 
-  private static string AddMazeFragment(bool printCursor, string board, int row, int k, int column) {
-    if (ShouldPrintVertical(k)) {
-      board = AddWall(printCursor, board, row, column);
-    } else {
+  private static string AddMazeFragment(IEnumerable<(int, int)> cursors, string board, int row, int k, int column) {
+    if (ShouldPrintVertical(k))
+      board = AddWall(cursors, board, row, column);
+    else
       board = AddFloor(board, row, column);
-    }
 
     return board;
   }
 
-  private static string AddWall(bool printCursor, string board, int row, int column) {
+  private static string AddWall(IEnumerable<(int, int)> cursors, string board, int row, int column) {
     if (ShouldPrintWall(row, column))
-      board = AddWallWithFullSideAndCursor(printCursor, board, row, column);
-    else {
-      board = AddWallWithFullSide(printCursor, board, row, column);
-    }
+      board = AddWallWithFullSideAndCursor(cursors, board, row, column);
+    else
+      board = AddWallWithEmptySideAndCursor(cursors, board, row, column);
 
     return board;
   }
@@ -239,23 +335,24 @@ class Maze {
   private static string AddFloor(string board, int row, int column) {
     if (ShouldPrintFloor(row, column))
       board += FloorWithoutHole;
-    else {
+    else
       board += FloorWithHole;
-    }
 
     return board;
   }
 
-  private static string AddWallWithFullSide(bool printCursor, string board, int row, int column) {
-    if (printCursor && CursorIsAtPosition(row, column))
+  private static string AddWallWithEmptySideAndCursor(IEnumerable<(int, int)> cursors, string board, int row, int column) {
+    var positions = cursors.ToList();
+    if (positions.Any() && CursorIsAtPositions(positions, row, column))
       board += WallWithLeftSideEmptyAndCursor;
     else
       board += WallWithLeftSideEmpty;
     return board;
   }
 
-  private static string AddWallWithFullSideAndCursor(bool printCursor, string board, int row, int column) {
-    if (printCursor && CursorIsAtPosition(row, column))
+  private static string AddWallWithFullSideAndCursor(IEnumerable<(int, int)> cursors, string board, int row, int column) {
+    var positions = cursors.ToList();
+    if (positions.Any() && CursorIsAtPositions(positions, row, column))
       board += WallWithLeftSideFullAndCursor;
     else
       board += WallWithLeftSideFull;
@@ -269,24 +366,16 @@ class Maze {
     // cursor.Item2 - Column (X)
 
     // Top
-    if (IsTopCellNotVisited(cursor)) {
-      return false;
-    }
+    if (IsTopCellNotVisited(cursor)) return false;
 
     // Bottom
-    if (IsBottomCellNotVisited(cursor)) {
-      return false;
-    }
+    if (IsBottomCellNotVisited(cursor)) return false;
 
     // Left
-    if (IsLeftCellNotVisited(cursor)) {
-      return false;
-    }
+    if (IsLeftCellNotVisited(cursor)) return false;
 
     // Right
-    if (IsRightCellNotVisited(cursor)) {
-      return false;
-    }
+    if (IsRightCellNotVisited(cursor)) return false;
 
     return true;
   }
@@ -300,11 +389,11 @@ class Maze {
   }
 
   private static bool IsBottomCellNotVisited((int, int) cursor) {
-    return IsCellBelowCursor(cursor) && !_maze[cursor.Item1 + 1][cursor.Item2].Visited;
+    return IsCellBelow(cursor) && !_maze[cursor.Item1 + 1][cursor.Item2].Visited;
   }
 
   private static bool IsTopCellNotVisited((int, int) cursor) {
-    return IsCellAboveCursor(cursor) && !_maze[cursor.Item1 - 1][cursor.Item2].Visited;
+    return IsCellAbove(cursor) && !_maze[cursor.Item1 - 1][cursor.Item2].Visited;
   }
 
   private static bool IsCellOnRight((int, int) cursor) {
@@ -315,23 +404,16 @@ class Maze {
     return cursor.Item2 - 1 >= 0;
   }
 
-  private static bool IsCellBelowCursor((int, int) cursor) {
+  private static bool IsCellBelow((int, int) cursor) {
     return cursor.Item1 + 1 < _maze.Length;
   }
 
-  private static bool IsCellAboveCursor((int, int) cursor) {
+  private static bool IsCellAbove((int, int) cursor) {
     return cursor.Item1 - 1 >= 0;
   }
 
-  private static bool CursorIsCorrect((int, int) cursor) {
-    return cursor.Item1 - 1 >= 0 &&
-           cursor.Item2 - 1 >= 0 &&
-           cursor.Item1 + 1 < _maze.Length &&
-           cursor.Item2 + 1 < _maze[0].Length;
-  }
-
-  private static bool CursorIsAtPosition(int row, int column) {
-    return _cursor.Item1 == row && _cursor.Item2 == column;
+  private static bool CursorIsAtPositions(IEnumerable<(int, int)> positions, int row, int column) {
+    return positions.Contains((row, column));
   }
 
   private static bool ShouldPrintFloor(int row, int column) {
@@ -344,11 +426,10 @@ class Maze {
 
   private static string AddEndLines(string board, int k, int row) {
     if (ShouldPrintVertical(k)) {
-      if (_maze[row][_maze[0].Length - 1].Right) {
+      if (_maze[row][_maze[0].Length - 1].Right)
         board += WallEndWithExit;
-      } else {
+      else
         board += WallEnd;
-      }
     } else {
       board += FloorCorner;
     }
@@ -361,9 +442,7 @@ class Maze {
   }
 
   private static string AddOneLine(string board) {
-    for (var j = 0; j < _maze[0].Length; j++) {
-      board += "+---";
-    }
+    for (var j = 0; j < _maze[0].Length; j++) board += "+---";
 
     board += "+\n";
     return board;
@@ -373,9 +452,7 @@ class Maze {
     _maze = new Cell[height][];
     for (var row = 0; row < height; row++) {
       _maze[row] = new Cell[width];
-      for (var column = 0; column < _maze[row].Length; column++) {
-        _maze[row][column] = new Cell();
-      }
+      for (var column = 0; column < _maze[row].Length; column++) _maze[row][column] = new Cell();
     }
   }
 
@@ -412,7 +489,7 @@ class Maze {
   }
 }
 
-class Cell {
+internal class Cell {
   public bool Top;
   public bool Bottom;
   public bool Left;

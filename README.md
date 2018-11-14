@@ -8,7 +8,7 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 ## How to run/compile
 
 * **Python** - just run script using Pyhton 3 (for example. `python script.py`)
-* **C#** - you can run it using `mono` or clicking on Windows, and compile by `mcs`:
+* **C#** - you can run it using `mono` or clicking on exe, and compile by `mcs`:
   * compile - `mcs script.cs`
   * run - `mono script.exe`
 * **Rust** -
@@ -50,12 +50,12 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 
 ## Progress
 
-24/100
+25/100
 
 ■■■■■■■■■■■■■□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 
 All - **100** <br>
-Done - **24** <br>
+Done - **25** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/images/00.png)
@@ -127,8 +127,9 @@ using (WebClient client = new WebClient()) {
 As you see, not really a challenge. Let's move on
 * <a name="24">24</a> Sudoku (with resolver) - 19.09.2018 *Done* (`C#`)<br>
 ![24](docs/images/24.png)
-* <a name="25">25</a> Maze generator (with resolver) - 13.11.2018 *Partial done* (`C#`)<br>
+* <a name="25">25</a> Maze generator (with resolver using A*) - 14.11.2018 *Done* (`C#`)<br>
 ![25_1](docs/images/25_1.gif)
+![25_2](docs/images/25_2.gif)
 ## Bonus
 
 * <a name="bonus1">1.</a> Loading animation in console 24.02.2018 *Done* (`C#`)  ![Bonus 1](docs/images/bonus1.gif)
