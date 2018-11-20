@@ -54,16 +54,25 @@ class RadixConverter{
   private static int GetNumber() {
     Console.Write("\bNumber: ");
     var input = Console.ReadLine();
-    if(!int.TryParse(input, out var number)) {
+    var number = 0;
+    try {
+      number = Convert.ToInt32(input);
+    }
+    catch (FormatException) {
       ExitWithError("ERROR: Wrong number");
     }
+
     return number;
   }
 
   private static int GetRadix() {
     Console.Write("\bRadix: ");
     var input = Console.ReadLine();
-    if(!int.TryParse(input, out var radix)) {
+    var radix = 0;
+    try {
+      radix  = Convert.ToInt32(input);
+    }
+    catch (FormatException) {
       ExitWithError("ERROR: Wrong number");
     }
 
@@ -110,9 +119,10 @@ class RadixConverter{
   }
 
   private static int GetNumberFromChar(char number) {
-    if (int.TryParse(number.ToString(), out var result)) {
-      return result;
+    try {
+      return Convert.ToInt32(number);
     }
+    catch (FormatException) {}
 
     var alphabet = GetAlphabet();
 
