@@ -23,12 +23,10 @@ class RadixConverter{
       switch (key) {
         case ConsoleKey.D1:
           isOptionCorrect = true;
-          var number = GetNumber();
-          var radix = GetRadix();
-          var result = ConvertFromDecimal(number, radix);
-          Console.WriteLine(number + " in " + radix + " is: "  + result);
+          ConvertFromDecimalAndDisplayResult();
           break;
         case ConsoleKey.D2:
+          ConvertToDecimalAndDisplayResult();
           isOptionCorrect = true;
           break;
         default:
@@ -36,6 +34,21 @@ class RadixConverter{
           continue;
       }
     } while (!isOptionCorrect);
+  }
+
+  private static void ConvertToDecimalAndDisplayResult() {
+    Console.Write("\bNumber: ");
+    var number = Console.ReadLine();
+    var radix = GetRadix();
+    var result = ConvertToDecimal(number, radix);
+    Console.WriteLine(number + " from radix " + radix + " to decimal is equal " + result);
+  }
+
+  private static void ConvertFromDecimalAndDisplayResult() {
+    var number = GetNumber();
+    var radix = GetRadix();
+    var result = ConvertFromDecimal(number, radix);
+    Console.WriteLine(number + " in " + radix + " is: " + result);
   }
 
   private static int GetNumber() {
@@ -63,7 +76,7 @@ class RadixConverter{
   private static string ConvertFromDecimal(int number, int radix) {
     var result = "";
     var inputNumber = number;
-    var alphabet = Enumerable.Range('A', 26).Select(x => (char)x).ToArray();
+    var alphabet = GetAlphabet();
 
     while (inputNumber >= radix) {
       var modal = inputNumber % radix;
@@ -81,16 +94,32 @@ class RadixConverter{
     return string.Concat(result.Reverse());
   }
 
-  private static int ConvertToDecimal(string number, int radix) {
-    var result = 0;
-    var inputNumber = number;
-    var alphabet = Enumerable.Range('A', 26).Select(x => (char)x).ToArray();
+  private static long ConvertToDecimal(string number, int radix) {
+    var result = new long();
+    var inputNumber = number.Reverse().ToList();
 
-    foreach (var num in inputNumber) {
-      
+    for (var index = 0; index < inputNumber.Count(); index++) {
+      result += GetNumberFromChar(inputNumber[index]) * (long) Math.Pow(radix, Convert.ToDouble(index));
     }
 
     return result;
+  }
+
+  private static char[] GetAlphabet() {
+    return Enumerable.Range('A', 26).Select(x => (char)x).ToArray();
+  }
+
+  private static int GetNumberFromChar(char number) {
+    if (int.TryParse(number.ToString(), out var result)) {
+      return result;
+    }
+
+    var alphabet = GetAlphabet();
+
+    if (!alphabet.Contains(number.ToString().ToUpper()[0])) throw new ArgumentException("Wrong number");
+
+    var index = alphabet.ToList().FindIndex(c => c == number.ToString().ToUpper()[0]);
+    return index + 10;
   }
 
   private static void ExitWithError(string s) {

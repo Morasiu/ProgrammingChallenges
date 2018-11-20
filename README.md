@@ -43,6 +43,7 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 * [23 Image Downloader](#23)
 * [24 Sudoku (with resolver)](#24)
 * [25 Maze generator (with resolver)](#25)
+* [25 Radix Converter](#26)
 
 ## Bonuses
 
@@ -50,12 +51,11 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 
 ## Progress
 
-25/100
+26/100
 
-■■■■■■■■■■■■■□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
+■■■■■■■■■■■■■■□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 
 All - **100** <br>
-Done - **25** <br>
 
 * <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
 ![00](docs/images/00.png)
@@ -130,6 +130,8 @@ As you see, not really a challenge. Let's move on
 * <a name="25">25</a> Maze generator (with resolver using A*) - 14.11.2018 *Done* (`C#`)<br>
 ![25_1](docs/images/25_1.gif)
 ![25_2](docs/images/25_2.gif)
+* <a name="26">26</a> Radix Converter - 20.11.2018 *Done* (`C#`)<br>
+![26](docs/images/26.gif)
 ## Bonus
 
 * <a name="bonus1">1.</a> Loading animation in console 24.02.2018 *Done* (`C#`)  ![Bonus 1](docs/images/bonus1.gif)
