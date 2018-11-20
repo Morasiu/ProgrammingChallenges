@@ -5,18 +5,13 @@ All task from list of Programming Challenges v1.4
 
 If you have any questions, you can contact me by email morasiu2@gmail.com
 
-## How to run/compile
+So...
 
-* **Python** - just run script using Pyhton 3 (for example. `python script.py`)
-* **C#** - you can run it using `mono` or clicking on exe, and compile by `mcs`:
-  * compile - `mcs script.cs`
-  * run - `mono script.exe`
-* **Rust** -
-  * compile - `cargo build`
-  * run - click on `exe` file on Windows or run like a typical program on Linux (for example. typing its name in console)
+![Challenge accepted](docs/challenge_accepted.gif)
+
 
 ## Table of content
-
+* [How to run](#HOWTO)
 * [00 Name generator](#00)
 * [01 Higher/lower](#01)
 * [02 Temperature Converter](#02)
@@ -49,6 +44,17 @@ If you have any questions, you can contact me by email morasiu2@gmail.com
 
 1. [Loading animation](#bonus1)
 
+## <a name="HOWTO"> How to run/compile </a>
+
+* **Python** - just run script using Pyhton 3 (for example. `python script.py`)
+* **C#** - you can run it using `mono` or clicking on exe, and compile by `mcs`:
+  * compile - `mcs script.cs`
+  * run - `mono script.exe`
+* **Rust** -
+  * compile - `cargo build`
+  * run - click on `exe` file on Windows or run like a typical program on Linux (for example. typing its name in console)
+
+
 ## Progress
 
 26/100
@@ -79,7 +85,7 @@ All - **100** <br>
 * <a name="08">08</a> Hangman (with online words) - 24.02.2018 *Done* (`C#`)
 Words are from [Fake Name Generator](https://fakena.me/random-english-words/one/), but these are real words. Trust me.
 Definitions are form [FreeDictionary](https://www.thefreedictionary.com/) </br>
-![08](docs/images/08.png)
+![08](docs/images/08.gif)
 * <a name="09">09</a> Love Calculator - 27.02.2018 *Done* (`C#`)<br>
 [How it works](docs/LoveCalculator.md)<br>
 ![09](docs/images/09.png)
