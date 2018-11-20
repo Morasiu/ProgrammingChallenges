@@ -89,7 +89,7 @@ Definitions are form [FreeDictionary](https://www.thefreedictionary.com/) </br>
 ![11](docs/images/11.png)
 * <a name="12">12</a> ~~Internet Time~~ Clock - 01.03.2018 *Done* (`C#`)
 Why Clock? I found Internet Time quite boring challenge so I've made clock with ASCII art. <br>
-![12](docs/images/12.png)
+![12](docs/images/12.gif)
 * <a name="13">13</a> Haiku Generator - 02.03.2018 *Done* (`C#`) <br>
 ![13](docs/images/13.png)
 * <a name="14">14</a> Magic 8-ball - 06.03.2018 *Done* (`C#`) <br>
@@ -106,13 +106,13 @@ string.Concat(text.Reverse())
 Why I didn't solve that challenge? It sounds fun, but I hate writing GUI and that would be a nightmare for me.
 Maybe some day? 
 * <a name="18">18</a> Simple file Explorer - 09.08.2018 *Done* (`C#`)<br>
-![18](docs/images/18.png)
+![18](docs/images/18.gif)
 * <a name="19">19</a> Count Words - 13.08.2018 *Done* (`C#`)<br>
 ![19](docs/images/19.png)
 * <a name="20">20</a> Minesweeper - 14.08.2018 *Done* (`C#`)<br>
-![20](docs/images/20.png)
+![20](docs/images/20.gif)
 * <a name="21">21</a> Connect Four - 23.08.2018 *Done* (`Rust`)<br>
-![21](docs/images/21.png)
+![21](docs/images/21.gif)
 * <a name="22">22</a> BMI Calculator - 28.08.2018 *Done* (`Rust`)<br>
 ![22](docs/images/22.png)
 * <a name="23">23</a> Image Downloader - 28.08.2018 *Done* (`C#`)<br>
@@ -126,7 +126,7 @@ using (WebClient client = new WebClient()) {
 
 As you see, not really a challenge. Let's move on
 * <a name="24">24</a> Sudoku (with resolver) - 19.09.2018 *Done* (`C#`)<br>
-![24](docs/images/24.png)
+![24](docs/images/24.gif)
 * <a name="25">25</a> Maze generator (with resolver using A*) - 14.11.2018 *Done* (`C#`)<br>
 ![25_1](docs/images/25_1.gif)
 ![25_2](docs/images/25_2.gif)
