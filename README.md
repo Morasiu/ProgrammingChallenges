@@ -63,11 +63,13 @@ So...
 
 All - **100** <br>
 
-* <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`) <br>
+* <a name="00">00</a> Name Generator - 29.01.2018 *Done* (`Python 3`)<br>
 ![00](docs/images/00.png)
+<br> [Directory](challenges/00_Name_Generator)
 * <a name="01">01</a> Higher/lower - 31.01.2018 *Done* (`C#`) <br>
 ![01](docs/images/01.png)
 * <a name="02">02</a> Temperature Converter - 05.02.2018 *Done* (`C#`) <br>
+<br> [Directory](challenges/01_HigherLower)
 ![02](docs/images/02.png)
 * <a name="03">03</a> Age Calculator - 07.02.2018 *Done* (`C#`) <br>
 ![03](docs/images/03.png)
