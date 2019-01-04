@@ -38,7 +38,7 @@ So...
 * [23 Image Downloader](#23)
 * [24 Sudoku (with resolver)](#24)
 * [25 Maze generator (with resolver)](#25)
-* [25 Radix Converter](#26)
+* [26 Radix Converter](#26)
 
 ## Bonuses
 
